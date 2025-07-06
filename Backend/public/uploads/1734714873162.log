@@ -1,0 +1,15 @@
+﻿[09-12-24 16:24:52] info: Program: Starting Squirrel Updater: --checkForUpdate https://compass.mongodb.com/api/v2/update/compass/stable/win32-x64/1.44.7
+[09-12-24 16:24:52] info: Program: Fetching update information, downloading from https://compass.mongodb.com/api/v2/update/compass/stable/win32-x64/1.44.7
+[09-12-24 16:24:52] info: CheckForUpdateImpl: Generated new staging user ID: 5ecee306-fe48-5041-9189-8f489f8b0102
+[09-12-24 16:24:52] info: CheckForUpdateImpl: Downloading RELEASES file from https://compass.mongodb.com/api/v2/update/compass/stable/win32-x64/1.44.7
+[09-12-24 16:24:52] info: FileDownloader: Downloading url: https://compass.mongodb.com/api/v2/update/compass/stable/win32-x64/1.44.7/RELEASES?id=MongoDBCompass&localVersion=1.44.7&arch=amd64
+[09-12-24 16:24:57] warn: UpdateInfo: Couldn't get release notes for:MongoDBCompass-1.45.0-full.nupkg: System.IO.FileNotFoundException: Could not find file 'C:\Users\nikhi\AppData\Local\MongoDBCompass\packages\MongoDBCompass-1.45.0-full.nupkg'.
+File name: 'C:\Users\nikhi\AppData\Local\MongoDBCompass\packages\MongoDBCompass-1.45.0-full.nupkg'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at NuGet.ZipPackage.<>c__DisplayClass9_0.<.ctor>b__0()
+   at NuGet.ZipPackage.EnsureManifest()
+   at Squirrel.ReleaseEntry.GetReleaseNotes(String packageDirectory)
+   at Squirrel.UpdateInfo.<FetchReleaseNotes>b__19_0(ReleaseEntry x)
+[09-12-24 16:24:57] info: Program: Finished Squirrel Updater

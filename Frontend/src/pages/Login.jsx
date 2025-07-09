@@ -18,6 +18,9 @@ const Login = () => {
             const response = await axios.post("https://e-ms-ut2u.onrender.com/api/auth/login",{
               email,
               password
+            },
+            {
+              withCredentials: true
             });
             console.log(response)
             if(response.data.success){

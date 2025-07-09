@@ -9,12 +9,14 @@ import settingRouter from "./routes/setting.js"
 import dashboardRouter from "./routes/dashboard.js"
 
 import dotenv from "dotenv";
-import connectToDatabase from './db/db.js'
+import mongoose from "mongoose";
+// import connectToDatabase from './db/db.js'
 
 dotenv.config();
-connectToDatabase()
+// connectToDatabase()
 
 const app = express();
+const url = process.env.MONGODB_URL;
 
 // app.use(cors())
 app.use(cors({
@@ -38,7 +40,12 @@ app.use(cors({
   credentials: true
 }));
 
-
+mongoose
+  .connect(url)
+  .then(() => {
+    console.log("Database Connection Successfully");
+  })
+  .catch((error) => console.log("Database Error is ", error));
 
 
 app.use(express.json())

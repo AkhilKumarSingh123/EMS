@@ -16,7 +16,13 @@ connectToDatabase()
 
 const app = express();
 
-app.use(cors())
+// app.use(cors())
+app.use(cors({
+  origin: 'https://ems-p5ma.onrender.com', // ✅ Your frontend URL
+  credentials: true, // ✅ If using cookies or authentication
+}));
+
+
 app.use(express.json())
 app.use(express.static('public/uploads'))
 

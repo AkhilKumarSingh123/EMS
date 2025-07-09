@@ -9,12 +9,6 @@ const DepartmentList = () => {               ///////////////////////    req, res
   const [depLoading, setDepLoading] = useState(false)
   const [filterDepartments , setFilterDepartments] = useState([])
 
-  // const onDepartmentDelete = async (id) => {
-  //   const data = departments.filter(dep => dep._id !== id)
-  //   setDepartments(data)
-  //   // fetchDepartments()
-  //   // setFilterDepartments(data)
-  // }
   const onDepartmentDelete = () => {
 
     // setDepartments(data)
@@ -24,7 +18,7 @@ const DepartmentList = () => {               ///////////////////////    req, res
   const fetchDepartments = async () =>{
     setDepLoading(true)
       try{
-        const response = await axios.get("http://localhost:5000/api/department",{
+        const response = await axios.get("https://e-ms-ut2u.onrender.com/api/department",{
             headers : {
               "Authorization" : `Beared ${localStorage.getItem('token')}`
             }

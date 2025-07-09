@@ -32,35 +32,6 @@ const Add = () => {
        setEmployees(emps)
    }
 
-  //  useEffect(() =>{
-  //   const fetchEmployee = async() =>{
-  //     try{
-  //       const response = await axios.get(`http://localhost:5000/api/employee/${id}`,{
-  //          headers : {
-  //             "Authorization" : `Bearer ${localStorage.getItem('token')}`
-  //          }
-  //       })
-  //       if(response.data.success){
-  //         const employee = response.data.employee
-  //         setEmployee((prev) => ({
-  //             ...prev, 
-  //             name: employee.userId.name,
-  //             maritalStatus : employee.maritalStatus,
-  //             designation : employee.designation,
-  //             salary : employee.salary,
-  //             department : employee.department 
-  //         }))
-  //       } 
-  //     }
-  //     catch(error){
-  //       if(error.response && !error.response.data.success){
-  //         alert(error.response.data.error)
-  //       }
-  //     }
-  //  };
-  //  fetchEmployee()
-  //  },[])
-
     const handleChange = (e) =>{
         const {name, value} = e.target;
         setSalary((prevData) => ({...prevData, [name] : value}))
@@ -70,7 +41,7 @@ const Add = () => {
       e.preventDefault();
    
       try{
-          const response = await axios.post(`http://localhost:5000/api/salary/add`,salary,{
+          const response = await axios.post(`https://e-ms-ut2u.onrender.com/api/salary/add`,salary,{
             headers : {
               Authorization : `Bearer ${localStorage.getItem('token')}`
             }

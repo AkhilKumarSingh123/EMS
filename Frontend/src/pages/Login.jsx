@@ -15,7 +15,7 @@ const Login = () => {
         e.preventDefault();
         // alert("ok");
         try{
-            const response = await axios.post("http://localhost:5000/api/auth/login",{
+            const response = await axios.post("https://e-ms-ut2u.onrender.com/api/auth/login",{
               email,
               password
             });

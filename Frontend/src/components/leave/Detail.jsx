@@ -10,7 +10,7 @@ const Detail = () => {
   useEffect(() =>{
     const fetchLeave = async() =>{
        try{
-         const response = await axios.get(`http://localhost:5000/api/leave/detail/${id}`,{
+         const response = await axios.get(`https://e-ms-ut2u.onrender.com/api/leave/detail/${id}`,{
             headers : {
                Authorization : `Bearer ${localStorage.getItem('token')}`
             }
@@ -30,7 +30,7 @@ const Detail = () => {
 
   const changeStatus = async(id , status) =>{
     try{
-      const response = await axios.put(`http://localhost:5000/api/leave/${id}`,{status},{
+      const response = await axios.put(`https://e-ms-ut2u.onrender.com/api/leave/${id}`,{status},{
          headers : {
             Authorization : `Bearer ${localStorage.getItem('token')}`
          }
@@ -54,7 +54,7 @@ const Detail = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                  <img src={`http://localhost:5000/${leave.employeeId.userId.profileImage}`} className="rounded-full border w-36" />
+                  <img src={`https://e-ms-ut2u.onrender.com/${leave.employeeId.userId.profileImage}`} className="rounded-full border w-36" />
               </div>
 
               <div>

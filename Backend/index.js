@@ -89,6 +89,7 @@ const MONGO_URI = process.env.MONGODB_URL;
 // ✅ CORS Configuration (only one, not two)
 const allowedOrigins = [
   'http://localhost:3000',
+  'http://localhost:5173',
   'https://ems-p5ma.onrender.com'
 ];
 
